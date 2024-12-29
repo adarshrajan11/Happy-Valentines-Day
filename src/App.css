@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Rose&display=swap');
+
+*,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  background: url('./assets/icons/unsplash_RTdRHgyGiiw.svg') no-repeat center center fixed;
+  /* Center the background and make it fixed */
+  background-size: cover;
+  height: 100vh;
+
+  width: 100%;
+  overflow: hidden;
+
+}
+
+
+.love-meter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 15%;
+  margin: 20px;
+  height: 100vh;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.svg-container {
+  position: relative;
+  width: 200px;
+  height: 177px;
+  margin-bottom: 150px;
+
+}
+
+.svg-container h3 {
+  font-family: Red Rose;
+  width: 100%;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29.98px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #FFFFFF;
+  margin-bottom: 50px;
+  box-shadow: 0px 4px 4px 0px #FF535340 inset;
+
+}
+
+.liquid {
+  animation: wave 2s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0% {
+    d: path("M0,177 Q50,197,100,177 T200,177 V177 H0 Z");
+  }
+
+  50% {
+    d: path("M0,177 Q50,157,100,177 T200,157 V177 H0 Z");
+  }
+
+  100% {
+    d: path("M0,177 Q50,197,100,177 T200,177 V177 H0 Z");
+  }
+}
+
+.love-button {
+  font-family: Red Rose;
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  /* Rounded corners */
+  cursor: pointer;
+  /* Pointer cursor on hover */
+  transition: all 0.3s ease;
+  /* Smooth transition for hover effect */
+}
+
+.love-button img {
+  width: 20px;
+
+  height: 20px;
+
+}
+
+.love-button:hover {
+  background-color: #ff5599;
+
+  transform: scale(1.05);
+
+}
+
+
+
+.love-percentage {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.love-input {
+  width: 100%;
+  margin: 10px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 100px;
+  box-shadow: 0px 4px 4px 0px #FF000040;
+
+}
+
+.input-container label {
+  font-family: Red Rose;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29.98px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #FFFFFF;
+  box-shadow: 0px 4px 4px 0px #FF535340 inset;
+  margin-bottom: 20px;
+
+}
+
+.input-container input {
+  width: 229px;
+  height: 35px;
+  top: 178px;
+  left: 50px;
+  margin-bottom: 50px;
+  gap: 0px;
+  border-radius: 10px 10px 10px 10px;
+  border: none;
+  opacity: 0px;
+  box-shadow: 0px 4px 4px 0px #FF535340 inset;
+  font-family: Red Rose;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22.48px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  background-color: rgba(255, 83, 83, 0.25)
+}
+
+
+/* Header  */
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* Full viewport height */
+  position: relative;
+}
+
+.header-container img {
+  position: absolute;
+  top: 10px;
+  /* Adjust as needed */
+  left: 10px;
+  /* Adjust as needed */
+}
+
+.header-container h1 {
+
+  font-family: Red Rose;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 59.95px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+  color: #FFFFFF;
+}
+
+/* Banner */
