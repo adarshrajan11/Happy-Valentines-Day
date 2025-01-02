@@ -6,6 +6,7 @@ import btnlove from "../assets/icons/love.svg";
 const LoveMeter = () => {
     const [name, setName] = useState("");
     const [percentage, setPercentage] = useState(0);
+
     const liquidRef = useRef(null);
 
     const calculateLovePercentage = (input) => {
@@ -52,11 +53,13 @@ const LoveMeter = () => {
             <div className="svg-container">
                 <h3>LOVE METER</h3>
                 <svg
+                    filter="url(#filter0_i_101_2)"
                     width="200"
                     height="177"
                     viewBox="0 0 200 177"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
+                    color-interpolation-filters="sRGB"
                 >
 
                     <defs>
@@ -81,6 +84,30 @@ const LoveMeter = () => {
                     />
                 </svg>
             </div>
+            <div className="slider-container">
+                <label htmlFor="love-slider">{percentage}%</label>
+                <input
+                    type="range"
+                    id="love-slider"
+                    min="0"
+                    max="100"
+                    value={percentage} // Bind slider value to percentage
+                    readOnly // Make slider non-interactive
+                    style={{
+                        appearance: "none",
+                        width: "100%",
+                        height: "8px",
+                        // background: "linear-gradient(to right, #ff1196, #ffd1e8)",
+                        background: `linear-gradient(to right, #ff1196 ${percentage}%,rgba(255, 255, 255, 1) ${percentage}%)`,
+                        borderRadius: "5px",
+                        outline: "none",
+                        opacity: 0.9,
+                        marginTop: "10px",
+                        pointerEvents: 'auto', // Prevent user interaction
+                    }}
+                />
+
+            </div>
             <button onClick={handleClick} className="love-button">
                 SUBMIT
                 <img src={btnlove} alt="" />
@@ -88,7 +115,28 @@ const LoveMeter = () => {
             {/* {percentage > 0 && (
                 <p className="love-percentage">Love Percentage: {percentage}%</p>
             )} */}
+            <style jsx>{`
+    #love-slider::-webkit-slider-thumb {
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #ff1196; /* Customize the color here */
+        cursor: pointer;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Optional shadow for a 3D effect */
+    }
+
+    #love-slider::-moz-range-thumb {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #ff1196; /* Customize the color here */
+        cursor: pointer;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Optional shadow for a 3D effect */
+    }
+`}</style>
         </div>
+
     );
 };
 
